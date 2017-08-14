@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Myflix</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Calendário</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Cadastro</a></li>
+            <li><a href="editar.html">Editar Série</a></li>
+            <li><a href="series.html">Suas Series</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  <div class="container">
+    <div class="mensagem">
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="titulo">Titulo</label>
+      <input type="text" class="form-control"
+             list="series"
+             id="titulo" name="titulo"
+             placeholder="Titulo da Serie"
+             required>
+      <datalist id="series">
+        <!-- <option value="Desenvolvimento Baseado em Objetos"/>
+        <option value="Matemática II"/>
+        <option
+          value="Língua Portuguesa e Literatura Brasileira II"/> -->
+      </datalist>
+    </div>
+    <div class="form-group">
+      <label for="temporada">Temporada</label>
+      <input type="number" class="form-control"
+             id="temporada" name="temporada"
+             placeholder="Temporada" required>
+    </div>
+    <div class="form-group">
+      <label for="capitulos">Quantidade de Episódios da Temporada</label>
+      <input type="number" class="form-control"
+             id="capitulos" name="capitulos"
+             placeholder="Episódios" required>
+    </div>
+    <button type="submit" class="btn btn-default">
+      Salvar
+    </button>
+  </form>
+</div>
+
+
+  <script src="js/index.js">
+  </script>
+  <!-- jQuery (necessary for Boottrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/handlebars.js"></script>
+
+  <script type="text/javascript" src="js/persistencia.js"></script>
+
+  <script id="sucesso" type="text/x-handlebars-template">
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Sucesso!</strong> {{mensagem}}
+    </div>
+  </script>
+  </body>
+</html>
